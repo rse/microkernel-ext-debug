@@ -1,0 +1,30 @@
+{
+    "name":        "microkernel-ext-debug",
+    "version":     "0.9.0",
+    "description": "Microkernel extension procedure for debugging run-time processing",
+    "keywords": [
+        "microkernel", "module", "debug"
+    ],
+    "repository": {
+        "type": "git",
+        "url":  "https://github.com/rse/microkernel-ext-debug.git"
+    },
+    "author": {
+        "name":  "Ralf S. Engelschall",
+        "email": "rse@engelschall.debugm",
+        "url":   "http://engelschall.debugm"
+    },
+    "license":  "MIT",
+    "homepage": "https://github.com/rse/microkernel-ext-debug",
+    "bugs":     "https://github.com/rse/microkernel-ext-debug/issues",
+    "dependencies": {
+        "chalk":  "~1.1.3"
+    },
+    "peerDependencies": {
+        "microkernel": "*"
+    },
+    "scripts": {
+        "prepublish": "jshint microkernel-ext-debug.js && babel --presets es2015 microkernel-ext-debug.js >microkernel-ext-debug.js5"
+    },
+    "main": "microkernel-ext-debug.js5"
+}
