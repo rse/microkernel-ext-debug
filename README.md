@@ -15,8 +15,8 @@ About
 
 This is an extension procedure for the
 [Microkernel](http://github.com/rse/microkernel) server
-application environment, adding the capability to debug
-the run-time processing by displaying topological module ordering,
+application environment, adding the capability to debug the run-time
+processing of the microkernel by displaying topological module ordering,
 state transitions and enter/leave method calls.
 
 Usage
