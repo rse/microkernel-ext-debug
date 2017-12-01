@@ -18,13 +18,13 @@
     "homepage": "https://github.com/rse/microkernel-ext-debug",
     "bugs":     "https://github.com/rse/microkernel-ext-debug/issues",
     "dependencies": {
-        "chalk":               "~1.1.3"
+        "chalk":               "~2.3.0"
     },
     "devDependencies": {
-        "babel-cli":           "~6.24.1",
+        "babel-cli":           "~6.26.0",
         "babel-preset-es2015": "~6.24.1",
-        "babel-eslint":        "~7.2.3",
-        "eslint":              "~3.19.0"
+        "babel-eslint":        "~8.0.3",
+        "eslint":              "~4.12.1"
     },
     "peerDependencies": {
         "microkernel":         "*"
