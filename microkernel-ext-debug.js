@@ -1,6 +1,6 @@
 /*
 **  Microkernel -- Microkernel for Server Applications
-**  Copyright (c) 2015-2017 Ralf S. Engelschall <rse@engelschall.com>
+**  Copyright (c) 2016-2018 Ralf S. Engelschall <rse@engelschall.com>
 **
 **  Permission is hereby granted, free of charge, to any person obtaining
 **  a copy of this software and associated documentation files (the
@@ -22,18 +22,19 @@
 **  SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 */
 
-import cluster from "cluster"
-import chalk   from "chalk"
+/*  external requirements  */
+const cluster = require("cluster")
+const chalk   = require("chalk")
 
-/*  export a Microkernel extension procedure  */
-export default function (kernel) {
+/*  the Microkernel extension procedure  */
+const Extension = (kernel) => {
     /*  output debug information  */
     const output = (msg) => {
         let id = process.pid
         if (cluster.isMaster)
             id = "MASTER"
         else if (cluster.isWorker)
-            id = "WORKER-" + cluster.worker.id
+            id = `WORKER-${cluster.worker.id}`
         process.stdout.write(`microkernel: ${chalk.blue("DEBUG")} [${id}]: ${msg}\n`)
     }
 
@@ -63,4 +64,7 @@ export default function (kernel) {
         return result
     })
 }
+
+/*  export the Microkernel extension  */
+module.exports = Extension
 
