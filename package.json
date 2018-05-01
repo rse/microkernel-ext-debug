@@ -34,6 +34,9 @@
     "peerDependencies": {
         "microkernel":              "*"
     },
+    "engines": {
+        "node":                     ">=8.0.0"
+    },
     "scripts": {
         "prepublishOnly": "eslint --config eslint.yaml microkernel-ext-debug.js"
     },
