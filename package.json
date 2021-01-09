@@ -1,6 +1,6 @@
 {
     "name":        "microkernel-ext-debug",
-    "version":     "0.9.16",
+    "version":     "0.9.17",
     "description": "Microkernel extension procedure for debugging run-time processing",
     "keywords": [
         "microkernel", "module", "debug"
